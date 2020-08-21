@@ -14,14 +14,27 @@
 	------------------------------------------------------ */
 	$(window).load(function () {
 
+		$("#preloader").delay(screen.width > 1024 ? 1000 : 500).fadeOut("slow")
 		// will first fade out the loading animation 
 		$("#loader").fadeOut("slow", function () {
-
-			// will fade out the whole DIV that covers the website.
-			$("#preloader").delay(300).fadeOut("slow");
-
+			
 		});
+	})
 
+	const winHeight = window.innerHeight;
+
+	$(window).on('scroll', _ => {
+		let distance = $(window).scrollTop()
+		if (distance > winHeight) {
+			$('.menu-link').each(function(_, val) {
+				val.style.color = 'black'
+			})
+		}
+		else {
+			$('.menu-link').each(function(_, val) {
+				val.style.color = 'white'
+			})
+		}
 	})
 
 
@@ -163,9 +176,8 @@
 	/*---------------------------------------------------- */
 	/* Highlight the current section in the navigation bar
 	------------------------------------------------------ */
-	var sections = $("section"),
-		navigation_links = $("#main-nav-wrap li a");
-
+	var navigation_links = $("#main-nav-wrap li a");
+	const sections = $('sections')
 	sections.waypoint({
 
 		handler: function (direction) {
@@ -212,49 +224,6 @@
 	$('input, textarea, select').placeholder()
 
 
-	/*---------------------------------------------------- */
-	/*	contact form
-	------------------------------------------------------ */
-
-	/* local validation */
-	$('#contactForm').validate({
-
-		/* submit via ajax */
-		submitHandler: function (form) {
-			var sLoader = $('#submit-loader');
-
-			$.ajax({
-
-				type: "POST",
-				url: "/contact",
-				data: $(form).serialize(),
-				beforeSend: function () {
-
-					sLoader.fadeIn();
-
-				},
-				success: function (msg) {
-
-					sLoader.fadeOut();
-					$('#message-warning').hide();
-					$('#contactForm').fadeOut();
-					$('#message-success').css('display', 'block')
-					$('#message-success').fadeIn();
-
-				},
-				error: function (msg) {
-					sLoader.fadeOut();
-					$('#message-warning').html(msg.responseText);
-					$('#message-warning').fadeIn();
-
-				}
-
-			});
-		}
-
-	});
-
-
 	/*----------------------------------------------------- */
 	/* Back to top
 ------------------------------------------------------- */
@@ -282,14 +251,14 @@
 
 $(document).ready(function () {
 
-	let e1 = "<h1 class='typing'>Hello, I'm Mingxuan Fan.</h1>";
-	let e2 = "<h1 style='font-size: 4.2rem' class='typing'>Welcome to my website.</h1>";
+	// let e0 = "<h1 class='typing'>123123</h1>";
+	let e1 = "<h1 style='font-size: 4.2rem' class='typing'>Hello, This is Mingxuan Fan</h1>";
+	// let e2 = "<h1 style='font-size: 4.2rem' class='typing'>Welcome to my website.</h1>";
 	
+	// setTimeout(function () {
+	// 	document.getElementById("intro-text-box").innerHTML = e0;
+	// }, 0)
 	setTimeout(function () {
 		document.getElementById("intro-text-box").innerHTML = e1;
-	}, 0)
-
-	setTimeout(function () {
-		document.getElementById("intro-text-box").innerHTML = e2;
-	}, 4500)
+	}, screen.width > 1024 ? 1000 : 500)
 })
