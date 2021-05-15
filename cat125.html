@@ -10,6 +10,8 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="css/cat125.css" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
 		<!-- <noscript><link rel="stylesheet" href="css/noscript.css" /></noscript> -->
 	</head>
 	<body class="is-preload">
@@ -20,9 +22,10 @@
 					<nav>
 						<ul>
 							<li><a href="#intro">About</a></li>
-							<li><a href="#one">Computer Networks</a></li>
-							<li><a href="#two">Cyber Attacks</a></li>
-							<li><a href="#three">Cyber Security</a></li>
+							<li><a href="#network">Computer Networks</a></li>
+							<li><a href="#attacks">Cyber Attacks</a></li>
+							<li><a href="#security">Cyber Security</a></li>
+							<li><a href="#links">Related Sites</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -48,9 +51,36 @@
 					</section>
 
 				<!-- One -->
-					<section id="one" class="wrapper style2 spotlights">
+					<section id="network" class="wrapper style2 ">
+						<div class="container" style="padding-top: 2rem">
+							<div class="row align-items-center pb-5 mb-5">
+								<div class="col">
+									<h2>Computer Network</h2>
+									<p>A computer network is a group of computers that use a set of common communication protocols 
+										over digital interconnections for the purpose of sharing resources located on or provided by
+										the network nodes. </p>
+								</div>
+								<div class="col">
+									<img class="img-fluid" src="./images/cat125/internet.jpeg" alt=""/>
+								</div>
+							</div>
+							<div class="row align-items-center pt-5 mt-5 pb-5">
+								<div class="col">
+									<img class="img-fluid" src="./images/cat125/internet-2.jpg" alt=""/>
+								</div>
+								<div class="col">
+									<p>
+										The nodes of a computer network may include personal computers, servers, networking hardware, or other specialised or general-purpose hosts. They are identified by hostnames and network addresses. Hostnames serve as memorable labels for the nodes, rarely changed after initial assignment. Network addresses serve for locating and identifying the nodes by communication protocols such as the Internet Protocol.
+									</p>
+								</div>
+							</div>
+						</div>
+					</section>
+
+				<!-- Two -->
+					<section id="attacks" class="wrapper style3 spotlights">
 						<section>
-							<a href="#" class="image"><img src="images/cat125/pic01.jpg" alt="" data-position="center center" /></a>
+							<a href="#" class="image"><img class="img-fluid" src="./images/cat125/mitm.png" alt="" data-position="center center" /></a>
 							<div class="content">
 								<div class="inner">
 									<h2>Sed ipsum dolor</h2>
@@ -62,7 +92,7 @@
 							</div>
 						</section>
 						<section>
-							<a href="#" class="image"><img src="images/cat125/pic02.jpg" alt="" data-position="top center" /></a>
+							<a href="#" class="image"><img src="./images/cat125/ddos.png" alt="" data-position="top center" /></a>
 							<div class="content">
 								<div class="inner">
 									<h2>Feugiat consequat</h2>
@@ -74,7 +104,7 @@
 							</div>
 						</section>
 						<section>
-							<a href="#" class="image"><img src="images/cat125/pic03.jpg" alt="" data-position="25% 25%" /></a>
+							<a href="#" class="image"><img src="./images/cat125/vulnerability.png" alt="" data-position="25% 25%" /></a>
 							<div class="content">
 								<div class="inner">
 									<h2>Ultricies aliquam</h2>
@@ -85,11 +115,7 @@
 								</div>
 							</div>
 						</section>
-					</section>
-
-				<!-- Two -->
-					<section id="two" class="wrapper style3 fade-up">
-						<div class="inner">
+						<!-- <div class="inner">
 							<h2>Lorem ipsum amet</h2>
 							<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
 							<div class="features">
@@ -127,15 +153,25 @@
 							<ul class="actions">
 								<li><a href="generic.html" class="button">Learn more</a></li>
 							</ul>
-						</div>
+						</div> -->
 					</section>
 
 				<!-- Three -->
-					<section id="three" class="wrapper style1 fade-up">
+					<section id="security" class="wrapper style2 fade-up">
 						<div class="inner">
 							<h2>Lorem ipsum amet</h2>
 							<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
 
+						</div>
+					</section>
+
+					<section id="links" class="wrapper style1 fade-up">
+						<div class="inner">
+							<h2>Related Sites</h2>
+							<a href="https://www.javatpoint.com/cyber-security-introduction">Cyber Security Introduction</a>
+							<p>This site provides a general and introductory overview of the history, goals, principles and technologies of cyber security. Links to common cyber attacks are also included in this webpage.</p>
+							<a href="https://www.javatpoint.com/computer-network-introduction">Computer Network Introduction</a>
+							<p>This site provides a general explanation of how computer network system works. It offers detailed explanation of every network layer in the OSI model as well as the illustration of common network protocols.</p>
 						</div>
 					</section>
 

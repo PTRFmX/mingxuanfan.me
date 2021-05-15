@@ -115,11 +115,11 @@ input, select, textarea {
 /* Type */
 
 	body, input, select, textarea {
-		color: rgba(255, 255, 255, 0.55);
+		color: rgba(255, 255, 255, 0.55) !important;
 		font-family: Arial, Helvetica, sans-serif;
-		font-size: 16.5pt;
+		font-size: 16.5pt !important;
 		font-weight: normal;
-		line-height: 1.75;
+		line-height: 1.75 !important;
 	}
 
 		@media screen and (max-width: 1680px) {
