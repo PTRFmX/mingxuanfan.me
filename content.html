@@ -22,7 +22,7 @@
 					<ul>
 						<li><a href="cat125.html">Home</a></li>
 						<li>
-							<a href="#">Contents</a>
+							<a href="content.html">Contents</a>
 							<ul>
 								<li><a href="content.html#cn">Computer networks</a></li>
 								<li><a href="content.html#ca">Cyber attacks</a></li>
@@ -59,46 +59,67 @@
 							<h3>Cyber Attacks</h3>
 							<h5>Man-in-the-middle attack</h5>
 							<p>
-								A very common cyberattack is called the “Man-in-the-middle” attack. Let’s continue the delivery system example introduced above. Imagine if there’s a bad guy disguised himself as the postman, then he can take out your letter, read your message, maliciously modify the content, put it back into the envelope and send it to your friend. Your friend thus receives a false message from you.
+								A very common cyberattack is called the “Man-in-the-middle” attack, where the attacker maliciously pretend as the server to the client and as the client to the server. In this way, all data passed between the two hosts will be intercepted by the attacker, who can thus benefit from the private information of the victim such as credit card number and social account password.  
+							</p>
+							<img src="assets/images/cat125/mitm.jpeg" style="width: 50%;" alt="" />
+							<p>
+								What’s worse is that the victim is unconscious of what happened. Due to the double identity of the attacker, neither the client nor the server are able to see through the attacker’s disguise. Often times, the attacker can escape from this kind of cyber crime.
 							</p>
 							<h5>DDoS (Distributed denial of Service) attack</h5>
 							<p>
-								Such attack is where the attacker sends overwhelming trash message to the victim through a large zombie network and thereby paralyzes the victim. This is similar to a “postman” filling your mailbox with thousands of trash letters so that you can’t distinguish which one is from your friend. As a result, you’re unable to respond to your friend’s message.
+								Such attack is where the attacker sends overwhelming trash message to the victim through a large zombie network and thereby paralyzes the victim. The effectiveness of this attack depends on the capacity of the zombie network that the attacker control, which is highly expensive and time-consuming to build. However, if he capacity is large enough, the damage that it costs is also quite appalling. It can immediately “destroy” sites that are overwhelmed, shutting down their service systems.
+							</p>
+							<img src="assets/images/cat125/ddos.png" style="width: 50%;" alt="" />
+							<p>
+								Nevertheless, common personal users are unlikely to be attacked by DDoS since it often targets at massive online service platforms, usually products by dot-com companies.
 							</p>
 							<h5>General Vulnerabilities</h5>
 							<p>
-								This attack utilizes the unsafe measures to get controls over the victim’s system without authorization. A simple example is that if you forget to lock the door when you leave home, then thieves can easily get in.
+								This attack utilizes the unsafe measures to get controls over the victim’s system without authorization. The word “vulnerability” refers to the inability of a system to protect itself in a hostile environment. This type of attack is considered the primary attack in the current cyber world, as vulnerabilities are ubiquitous on the Internet.
+							</p>
+							<img src="assets/images/cat125/sql-injections.png" style="width: 50%;" alt="" />
+							<p>
+								The severity of consequences depends on the level of vulnerability being attacked. In the worst case where the attacker acquires the ROOT permission, the whole system will be compromised.
 							</p>
 						</section>
 						<section id="cs">
 							<a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
 							<h3>Cyber Security</h3>
-							<h5>Counter MITM attack</h5>
+							<h5>Prevention of MITM attack</h5>
 							<p>
-								It is relatively easy to prevent MITM attacks through encryption. Encode your message by a shared method that only you and your friend know. Then seal the envelop with your unique signature. In this way, if the attacker takes out your letter, he/she can’t read the encrypted message. Moreover, your friend knows if the attacker has broken the seal.
+								It is relatively easy to prevent MITM attacks through some encryption methods of modern cryptography. The most common example is the HTTPS protocol where we use on a daily basis. The HTTPS protocol contains TLS encryption that utilizes an asymmetric encryption to encrypt a key for later symmetric encryption of message exchange. (For more information, please refer to the link in the reference page).
+							</p>
+							<img src="assets/images/cat125/tls-ssl.png" style="width: 50%;" alt="" />
+							<p>
+								In this way, the attacker are very unlikely to be able to read or modify the message even if it gets intercepted due to the attacker’s inability to decipher the encrypted data. The validity and safety of message transfer are thus guaranteed.
 							</p>
 							<h5>Counter DDoS attack</h5>
 							<p>
-								Unfortunately, there are no methods that can prevent DDoS attack completely. Common resolutions include putting systems on well-guarded cloud platforms such as CloudFlare or AWS. Back to the example, this is similar to hiring guards to protect your mailbox.
+								Unfortunately, there are no methods that can prevent DDoS attack completely. Common resolutions include setting up a backup site or filtering HTTP requests do not resolve the problem fundamentally. The easiest approach is to put websites on well-guarded cloud platforms such as CloudFlare or AWS.
+							</p>
+							<img src="assets/images/cat125/cloudflare.png" style="width: 50%;" alt="" />
+							<p>
+								The reason why few methods can prevent DDoS attack is that such attack is “violent”. It follows the rule of data transfer but overwhelm victims with absolute advantage of power.
 							</p>
 							<h5>Vulnerability detection</h5>
 							<p>
-								The main idea of this solution is to check all possible loopholes of your system, like closing the window, locking the door, and securing the key when you leave home.
+								The most effective way to detect whether a service is a vulnerability is to mimic the attacking process towards the service. Vulnerability detection is the most common job for penetration testers. They perform a comprehensive test(attack) on basically every possible cases on potentially vulnerable services and thereby clears out dangers in a system.
 							</p>
+							<img src="assets/images/cat125/penetration-test.jpeg" style="width: 50%;" alt="" />
 						</section>
 					</div>
 				</div>
 
 			<!-- Footer -->
 				<footer id="footer">
-					<ul class="icons">
+					<!-- <ul class="icons">
 						<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
 						<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
 						<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
 						<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
 						<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
 						<li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
-					</ul>
+					</ul> -->
 					<ul class="copyright">
 						<li>&copy; Mingxuan Fan. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 					</ul>
